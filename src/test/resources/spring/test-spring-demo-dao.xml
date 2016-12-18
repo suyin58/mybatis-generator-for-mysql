@@ -19,11 +19,11 @@
 
 	<context:annotation-config />
 	<bean id="propertyConfigurer"
-		class="com.wjs.common.config.SpringPlaceHolderConfigAdapter">
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<!-- 设置中央配置提供者 -->
 		<property name="locations">
 			<list>
-				<value>classpath:test-wjs-common-dao.properties</value>
+				<value>classpath:test-demo-dao.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -35,23 +35,23 @@
 
 	
 
-	<!-- 配置数据源-ifaex -->
-	<bean id="dataSource-ifaex" class="com.wjs.common.datasource.AutoSwitchDataSource">
-		<property name="driverClassName" value="${ifaex.jdbc.driverClassName}" />
-		<property name="url" value="${ifaex.jdbc.url}" />
-		<property name="url2" value="${ifaex.jdbc.url2}" />
-		<property name="username" value="${ifaex.jdbc.username}" />
-		<property name="password" value="${ifaex.jdbc.password}" />
+	<!-- 配置数据源-demo -->
+	<bean id="dataSource-demo" class="org.mybatis.plugin.AutoSwitchDataSource">
+		<property name="driverClassName" value="${demo.jdbc.driverClassName}" />
+		<property name="url" value="${demo.jdbc.url}" />
+		<property name="url2" value="${demo.jdbc.url2}" />
+		<property name="username" value="${demo.jdbc.username}" />
+		<property name="password" value="${demo.jdbc.password}" />
 	</bean>
-	<bean id="sqlSessionFactory-ifaex" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource-ifaex" />
+	<bean id="sqlSessionFactory-demo" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource-demo" />
 		<!-- 
 		<property name="configLocation" value="classpath:lbc-mybatis-config.xml" />
 		 -->
 		<property name="mapperLocations">
 			<list>
 				<value>
-					classpath*:com/wjs/common/dao/*/*Mapper.xml
+					classpath*:com/malam/demo/dao/*/mapping/*Mapper.xml
 				</value>
 			</list>
 		</property>
@@ -64,19 +64,19 @@
 		
 	</bean>
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.wjs.common.dao.r" />
-		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory-ifaex" />
+		<property name="basePackage" value="com.malam.demo.dao" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory-demo" />
 	</bean>
 
-	<bean id="TransactionManager_ifaex"
+	<bean id="TransactionManager_demo"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource-ifaex"></property>
+		<property name="dataSource" ref="dataSource-demo"></property>
 	</bean>
-	<tx:annotation-driven transaction-manager="TransactionManager_ifaex"
+	<tx:annotation-driven transaction-manager="TransactionManager_demo"
 		proxy-target-class="true" />
 
 	<!-- 分页控件 -->
-	<bean id="pagePlugin" class="com.wjs.common.dao.page.PagePlugin">
+	<bean id="pagePlugin" class="org.mybatis.plugin.PagePlugin">
 		<property name="pageMethod" value="pageByExample" />
 	</bean>
  

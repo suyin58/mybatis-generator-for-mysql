@@ -45,7 +45,7 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		</javaTypeResolver>
 
 		<!-- javaModelGenerator是模型的生成信息，这里将指定这些Java model类的生成路径； -->
-		<javaModelGenerator targetPackage="com.wjs.common.dao.o"
+		<javaModelGenerator targetPackage="com.malam.demo.domain.access"
 		targetProject="src/main/java">
 		<property name="enableSubPackages" value="true" />
 		<property name="trimStrings" value="true" />
@@ -55,29 +55,25 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
 		
 
 		<!-- sqlMapGenerator是mybatis 的sqlMapper XML文件的生成信息，包括生成路径等；   先生成xml，在生成java-->
-		<sqlMapGenerator targetPackage="com.wjs.common.dao.m"
+		<sqlMapGenerator targetPackage="com.malam.demo.dao.access.mapping"
 		targetProject="src/main/resources">
 		<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<!-- javaClientGenerator是应用接口的生成信息； -->
 		<javaClientGenerator type="XMLMAPPER"
-		 targetPackage="com.wjs.common.dao.r"
+		 targetPackage="com.malam.demo.dao.access"
 		 targetProject="src/main/java">
 		<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
 		<!-- table是用户指定的被生成相关信息的表，它必须在指定的jdbc连接中已经被建立。可以多个 -->
-		 
+		<table tableName="access_ip_control_config" domainObjectName="AccessIpControlConfig" ></table>
+		<!-- 
 		<table tableName="access_custid_control_config" domainObjectName="AccessCustidControlConfig" ></table>
 		<table tableName="access_flow_control_config" domainObjectName="AccessFlowControlConfig" ></table>
 		<table tableName="access_ip_control_config" domainObjectName="AccessIpControlConfig" ></table>
-		
-		<!-- 
-		<table tableName="app_bind_status" domainObjectName="AppBindStatus" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false"
-			selectByExampleQueryId="false"></table>
-		-->
+		 -->
 		 
 
 	</context>

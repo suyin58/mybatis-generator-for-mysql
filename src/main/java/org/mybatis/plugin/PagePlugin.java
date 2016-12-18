@@ -1,4 +1,4 @@
-package com.wjs.common.dao.page;
+package org.mybatis.plugin;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;
@@ -23,13 +23,14 @@ import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.factory.DefaultObjectFactory;
 import org.apache.ibatis.reflection.wrapper.DefaultObjectWrapperFactory;
-import org.apache.ibatis.session.Configuration;
+import org.mybatis.plugin.PageDataList;
 import org.springframework.jdbc.support.JdbcUtils;
 
-import com.wjs.common.dao.PageDataList;
 
 @Intercepts(@Signature(method = "handleResultSets", type = ResultSetHandler.class, args = { Statement.class }))
 public class PagePlugin implements Interceptor {
+
+
 
 	private Properties properties;
 
@@ -144,5 +145,7 @@ public class PagePlugin implements Interceptor {
 
 		return properties;
 	}
+
+
 
 }

@@ -1,4 +1,4 @@
-package com.wjs.common.dao.o;
+package com.malam.demo.domain.access;
 
 import java.util.ArrayList;
 import java.util.List;

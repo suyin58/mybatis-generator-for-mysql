@@ -1,10 +1,10 @@
-package com.wjs.common.dao.r;
+package com.malam.demo.dao.access;
 
-import com.wjs.common.dao.PageDataList;
-import com.wjs.common.dao.o.AccessIpControlConfig;
-import com.wjs.common.dao.o.AccessIpControlConfigCriteria;
+import com.malam.demo.domain.access.AccessIpControlConfig;
+import com.malam.demo.domain.access.AccessIpControlConfigCriteria;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.mybatis.plugin.PageDataList;
 
 public interface AccessIpControlConfigMapper {
     /**
