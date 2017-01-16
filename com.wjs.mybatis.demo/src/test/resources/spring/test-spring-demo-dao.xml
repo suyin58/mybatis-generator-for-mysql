@@ -14,9 +14,12 @@
  	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 
-	<!-- 自动扫描dao和service包(自动注入) 
-	<context:component-scan base-package="com.wjs.mybatis.service" />
-	-->
+	<!-- 自动扫描service(自动注入) -->
+	<context:component-scan base-package="com.wjs.mybatis.demo.service" />
+	<!-- 自动扫描自定义切面(自动注入) -->
+	<context:component-scan base-package="com.wjs.aspectj" />
+	
+	
 	<context:annotation-config />
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
