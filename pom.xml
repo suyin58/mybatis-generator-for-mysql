@@ -7,8 +7,9 @@
     <packaging>pom</packaging>  
     
     <modules>
-        <module>demo-project</module>
-        <module>mybatis-generator-mysql</module> 
+        <module>com.wjs.mybatis.util</module>
+        <module>com.wjs.mybatis.generator</module> 
+        <module>com.wjs.mybatis.demo</module> 
     </modules>
     
     <properties>
