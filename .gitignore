@@ -1,2 +1,9 @@
 /.settings
 /*.project
+*.project
+*.classpath
+/com.wjs.mybatis.demo/.settings
+/com.wjs.mybatis.generator/*.project
+/com.wjs.mybatis.generator/*.classpath
+/com.wjs.mybatis.generator/.settings
+/com.wjs.util/.settings
