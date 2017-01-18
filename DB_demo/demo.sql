@@ -1,0 +1,15 @@
+
+DROP TABLE IF EXISTS test_demo;
+CREATE TABLE `test_demo` (
+`id`  bigint(20) NOT NULL AUTO_INCREMENT COMMENT '标准ID' ,
+`uri`  varchar(100) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT 'http请求uri' ,
+`access_count_max`  int(11) NOT NULL DEFAULT 0 COMMENT '最大请求数' ,
+PRIMARY KEY (`id`)
+)
+ENGINE=InnoDB
+DEFAULT CHARACTER SET=utf8 COLLATE=utf8_bin
+COMMENT='test_demo'
+AUTO_INCREMENT=3
+ROW_FORMAT=COMPACT
+;
+
