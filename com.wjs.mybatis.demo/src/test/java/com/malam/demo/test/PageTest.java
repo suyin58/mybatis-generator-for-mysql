@@ -7,7 +7,7 @@ import com.malam.demo.DemoTestBase;
 import com.wjs.mybatis.demo.dao.access.AccessIpControlConfigMapper;
 import com.wjs.mybatis.demo.domain.access.AccessIpControlConfig;
 import com.wjs.mybatis.demo.domain.access.AccessIpControlConfigCriteria;
-import com.wjs.mybatis.util.page.PageDataList;
+import com.wjs.util.dao.PageDataList;
 
 public class PageTest extends DemoTestBase{
 

@@ -1,4 +1,4 @@
-package com.wjs.annotation;
+package com.wjs.util.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

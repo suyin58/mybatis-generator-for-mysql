@@ -2,11 +2,10 @@ package com.wjs.mybatis.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.wjs.annotation.LockForUpdateWait;
 import com.wjs.mybatis.demo.dao.access.AccessIpControlConfigMapper;
 import com.wjs.mybatis.demo.service.LockTestService;
+import com.wjs.util.annotation.LockForUpdateWait;
 
 @Service("lockTestService")
 public class LockTestServiceImpl implements LockTestService{

@@ -326,7 +326,7 @@ public class FullyQualifiedJavaType implements
      */
     public static final FullyQualifiedJavaType getNewPageInstance() {
         // always return a new instance because the type may be parameterized
-        return new FullyQualifiedJavaType("com.wjs.mybatis.util.page.PageDataList"); //$NON-NLS-1$
+        return new FullyQualifiedJavaType("com.wjs.util.dao.PageDataList"); //$NON-NLS-1$
     }
 
 

@@ -15,7 +15,7 @@
 	<groupId>com.wjs</groupId>
 	<version>1.0.1</version>
 
-	<artifactId>com.wjs.mybatis.demo</artifactId>
+	<artifactId>com.wjs.demo</artifactId>
 	<packaging>jar</packaging> 
 
 	<build>
@@ -116,7 +116,7 @@
 	
 		<dependency>
 			<groupId>com.wjs</groupId>
-			<artifactId>com.wjs.mybatis.util</artifactId>
+			<artifactId>com.wjs.util</artifactId>
 			<version>1.0.1</version>
 		</dependency>
 

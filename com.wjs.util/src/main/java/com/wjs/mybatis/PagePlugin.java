@@ -1,4 +1,4 @@
-package com.wjs.mybatis.util.page;
+package com.wjs.mybatis;
 
 import java.lang.reflect.Field;
 import java.sql.Connection;
@@ -24,6 +24,8 @@ import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.factory.DefaultObjectFactory;
 import org.apache.ibatis.reflection.wrapper.DefaultObjectWrapperFactory;
 import org.springframework.jdbc.support.JdbcUtils;
+
+import com.wjs.util.dao.PageDataList;
 
 
 @Intercepts(@Signature(method = "handleResultSets", type = ResultSetHandler.class, args = { Statement.class }))

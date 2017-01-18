@@ -1,4 +1,4 @@
-package com.wjs.aspectj;
+package com.wjs.util.aspectj;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
-import com.wjs.annotation.LockForUpdateWait;
+import com.wjs.util.annotation.LockForUpdateWait;
 /**
  * mysql的for update no wait 实现
  * 参考资料：http://blog.itpub.net/7591490/viewspace-1033495/

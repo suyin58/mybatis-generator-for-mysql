@@ -1,4 +1,4 @@
-package com.wjs.mybatis.util.page;
+package com.wjs.util.dao;
 
 import java.util.ArrayList;
 import java.util.List;

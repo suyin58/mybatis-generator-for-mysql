@@ -17,7 +17,7 @@
 	<!-- 自动扫描service(自动注入) -->
 	<context:component-scan base-package="com.wjs.mybatis.demo.service" />
 	<!-- 自动扫描自定义切面(自动注入) -->
-	<context:component-scan base-package="com.wjs.aspectj" />
+	<context:component-scan base-package="com.wjs.util.aspectj" />
 	
 	
 	<context:annotation-config />
@@ -81,7 +81,7 @@
 		proxy-target-class="true" />
 
 	<!-- 分页控件 -->
-	<bean id="pagePlugin" class="com.wjs.mybatis.util.page.PagePlugin">
+	<bean id="pagePlugin" class="com.wjs.mybatis.PagePlugin">
 		<property name="pageMethod" value="pageByExample" />
 	</bean>
  

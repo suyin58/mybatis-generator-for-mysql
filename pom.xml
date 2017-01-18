@@ -7,7 +7,7 @@
     <packaging>pom</packaging>  
     
     <modules>
-        <module>com.wjs.mybatis.util</module>
+        <module>com.wjs.util</module>
         <module>com.wjs.mybatis.generator</module> 
         <module>com.wjs.mybatis.demo</module> 
     </modules>

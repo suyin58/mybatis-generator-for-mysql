@@ -101,7 +101,7 @@
 	
 		<dependency>
 			<groupId>com.wjs</groupId>
-			<artifactId>com.wjs.mybatis.util</artifactId>
+			<artifactId>com.wjs.util</artifactId>
 			<version>1.0.1</version>
 		</dependency>
 		<dependency>
